@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css'; 
-import Axios from "axios";
+
 
 function App() {
   // Variables de estado para los campos del formulario y la generación de turno
@@ -23,11 +23,7 @@ function App() {
   const [turnosPorMunicipio, setTurnosPorMunicipio] = useState({});
 
 
-  const add = ()=>{
-
-    alert(nombre);
-    
-  }
+ 
   // Lista de municipios
   const municipios = [
     { value: 'Abasolo', label: 'Abasolo' },
