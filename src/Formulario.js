@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css'; 
+import Axios from "axios";
 
 function App() {
   // Variables de estado para los campos del formulario y la generación de turno
@@ -21,6 +22,12 @@ function App() {
   const [turnoGenerado, setTurnoGenerado] = useState('');
   const [turnosPorMunicipio, setTurnosPorMunicipio] = useState({});
 
+
+  const add = ()=>{
+
+    alert(nombre);
+    
+  }
   // Lista de municipios
   const municipios = [
     { value: 'Abasolo', label: 'Abasolo' },
@@ -152,7 +159,7 @@ function App() {
 />
       <h2>My Website, Inc</h2>
       <form id="formulario">
-        <label htmlFor="textboxNombreCompleto">Nombre Completo:</label>
+        <label htmlFor="textboxNombreCompleto">Nombre Completo del Familiar:</label>
         <input type="text" id="textboxNombreCompleto" value={nombreCompleto} onChange={(e) => setNombreCompleto(e.target.value)} />
         
         <label htmlFor="textboxNombre">Nombre:</label>
