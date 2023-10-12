@@ -10,6 +10,7 @@ const db = mysql.createConnection({
     database:"sistema_crud"
 });
 
+
 app.post("/create",(req,res) =>{
      const nombrecompleto =req.body.nombrecompleto;
      const nombre =req.body.nombre;
@@ -22,6 +23,7 @@ app.post("/create",(req,res) =>{
      const nivel =req.body.nivel;
      const municipio =req.body.municipio;
      const asunto =req.body.asunto;
+     
                                    
                                   //asi es como vienen en la bdd                                                   //de la variable que se van a recibir
      db.query('INSERT INTO alumno(curp,nombre,apellidoMaterno,apellidoPaterno) VALUES(?,?,?,?)',[curp,nombre,apellidomaterno,apellidopaterno],
